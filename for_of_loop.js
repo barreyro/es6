@@ -12,29 +12,29 @@ for(const index in countries) { // index
 
 // NEW WAY
 // 1. With arrays
-// for(const country of countries) { // value
-//    console.log(country);
-// }
+for(const country of countries) { // value
+   console.log(country);
+}
 
 // 2. With objects
-// const countries = {
-//    canada: 'Canada',
-//    usa: 'USA',
-//    mexico: 'Mexico'
-// }; 
+const countries = {
+   canada: 'Canada',
+   usa: 'USA',
+   mexico: 'Mexico'
+}; 
 
-// // Throws TypeError
-// for(const country of countries) { // value
-//    console.log('j', country);
-// }
+// Throws TypeError
+for(const country of countries) { // value
+   console.log('j', country);
+}
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-// countries[Symbol.iterator] = function () {
-//     let i = 0;
-//     return {
-//         next: function () {
-//             value: i++,
-//          done: i < 3
-//         }
-//     }
-// }
+countries[Symbol.iterator] = function () {
+    let i = 0;
+    return {
+        next: function () {
+            value: i++,
+         done: i < 3
+        }
+    }
+}
